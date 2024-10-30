@@ -5,7 +5,7 @@ import os
 load_dotenv()
 
 api = os.getenv("Hugging_Face_API_TOKEN")
-print(api)
+
 
 # Initialize the client
 client = InferenceClient(api_key=api)
