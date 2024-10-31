@@ -14,15 +14,12 @@ conversation_history = [
 ]
 
 def chat(user_input):
-    # Add user's message to history
     conversation_history.append({"role": "user", "content": user_input})
 
-    # Get response from Groq
     stream = client.chat.completions.create(
         messages=conversation_history, model="llama-3.2-90b-vision-preview", stream=True
     )
 
-    # Collect and print the response
     full_response = ""
     for chunk in stream:
         content = chunk.choices[0].delta.content
@@ -31,7 +28,6 @@ def chat(user_input):
             print(content, end="", flush=True)
     print()  # New line after response
 
-    # Add assistant's response to history
     conversation_history.append({"role": "assistant", "content": full_response})
 
     return full_response
