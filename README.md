@@ -1,6 +1,7 @@
 # 🎙️🤖 Chatbot leveraging the "Llama 3.2 Model" with Chainlit UI 🗣️💬
 
 🚀 Uses Groq API for fastest responses without any model downloads. Groq provides free access to the model with some rate limits.
+![Animations](Animation.gif)
 
 ## 🛠️ Setup
 
